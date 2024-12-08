@@ -1,0 +1,5 @@
+is_global = true
+build_property.RootNamespace = social_network_api
+build_property.ProjectDir = C:\code\c-sharp\social_network_api\social_network_api\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 

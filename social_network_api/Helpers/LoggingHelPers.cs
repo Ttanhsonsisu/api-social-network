@@ -16,7 +16,7 @@ namespace social_network_api.Helpers
         {
             this._context = context;
         }
-        public async Task<Task> InsertLogging(LoggingRequest longgingRequest)
+        public Task InsertLogging(LoggingRequest longgingRequest)
         {
             try
             {
@@ -33,8 +33,8 @@ namespace social_network_api.Helpers
                 logging.User_Created = longgingRequest.User_Created;
                 logging.User_type = longgingRequest.User_type;
 
-                await _context.Loggings.AddAsync(logging);
-                await _context.SaveChangesAsync();
+                _context.Loggings.AddAsync(logging);
+                _context.SaveChangesAsync();
             }
             catch (Exception ex)
             {

@@ -17,6 +17,7 @@ using social_network_api.Interfaces;
 using social_network_api.Interfaces.AddFriend;
 using social_network_api.Interfaces.Comment;
 using social_network_api.Interfaces.Info;
+using social_network_api.Interfaces.Post;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -88,6 +89,7 @@ namespace social_network_api
             services.AddScoped<IComment, CommentDataAccess>();
             services.AddScoped<IFriend, FriendDataAccess>();
             services.AddScoped<IUser, UserDataAccess>(); 
+            services.AddScoped<IPost, PostDataAccess>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

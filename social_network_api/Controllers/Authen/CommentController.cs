@@ -15,7 +15,7 @@ using System.Threading.Tasks;
 
 namespace social_network_api.Controllers.Authen
 {
-    [Route("/api/auth/post")]
+    [Route("/api/auth/comment")]
     [Authorize(Policy = "AppUser")]
     [ApiController]
     public class CommentController : ControllerBase
@@ -33,7 +33,7 @@ namespace social_network_api.Controllers.Authen
 
         [Route("create")]
         [HttpPost]
-        public async Task<JsonResult> Create(CommentRequest commentRequest)
+        public JsonResult Create(CommentRequest commentRequest)
         {
             var username = User.Claims.Where(p => p.Type.Equals(ClaimTypes.Name)).FirstOrDefault();
             var user = _context.Users.Where(u => u.Username == username.Value).FirstOrDefault();
@@ -42,12 +42,12 @@ namespace social_network_api.Controllers.Authen
 
             var remoteIP = Request.HttpContext.Connection.RemoteIpAddress;
 
-            await _logging.InsertLogging(new LoggingRequest
+            _logging.InsertLogging(new LoggingRequest
             {
                 User_type = Consts.USER_TYPE_MEMBER,
                 Is_Call_Api = true,
                 Api_Name = "/api/app/auth/login",
-                Actions = "Đăng nhập với Tài khoản mới",
+                Actions = "Tạo mới comment" + username.ToString(),
                 Content = "",
                 Functions = "Hệ thống",
                 Is_Login = true,
@@ -76,7 +76,7 @@ namespace social_network_api.Controllers.Authen
                 User_type = Consts.USER_TYPE_MEMBER,
                 Is_Call_Api = true,
                 Api_Name = "/api/app/auth/login",
-                Actions = "Đăng nhập với Tài khoản mới",
+                Actions = "Cập nhật comment" + username.Value.ToString() + commentRequest.Id.ToString(),
                 Content = "",
                 Functions = "Hệ thống",
                 Is_Login = true,
@@ -88,23 +88,23 @@ namespace social_network_api.Controllers.Authen
             return new JsonResult(data) { StatusCode = 200 };
         }
 
-        [HttpGet("{id}")]
-        public async Task<JsonResult> GetDetail(CommentRequest commentRequest)
+        [HttpGet("detail/{id}")]
+        public  JsonResult GetDetail(int id)
         {
             var username = User.Claims.Where(p => p.Type.Equals(ClaimTypes.Name)).FirstOrDefault();
             var user = _context.Users.Where(u => u.Username == username.Value).FirstOrDefault();
 
-            var data = _listOtherData.GetDetail(user.Id, commentRequest.Id);
+            var data = _listOtherData.GetDetail(user.Id, id);
             // write log 
 
             var remoteIP = Request.HttpContext.Connection.RemoteIpAddress;
 
-            await _logging.InsertLogging(new LoggingRequest
+            _logging.InsertLogging(new LoggingRequest
             {
                 User_type = Consts.USER_TYPE_MEMBER,
                 Is_Call_Api = true,
                 Api_Name = "/api/app/auth/login",
-                Actions = "Đăng nhập với Tài khoản mới",
+                Actions = "xem chi tiết comment" + id.ToString(),
                 Content = "",
                 Functions = "Hệ thống",
                 Is_Login = true,
@@ -116,24 +116,24 @@ namespace social_network_api.Controllers.Authen
             return new JsonResult(data) { StatusCode = 200 };
         }
 
-        [Route("list")]
+        [Route("listCommentTree")]
         [HttpPost]
-        public async Task<JsonResult> GetList(CommentRequest commentRequest)
+        public JsonResult GetCommentListTree(CommentRequest commentRequest)
         {
             var username = User.Claims.Where(p => p.Type.Equals(ClaimTypes.Name)).FirstOrDefault();
             var user = _context.Users.Where(u => u.Username == username.Value).FirstOrDefault();
 
-            var data = _listOtherData.GetList(user.Id);
-            // write log 
-
+            var data = _listOtherData.GetListTree(commentRequest);
+            
+            // write log
             var remoteIP = Request.HttpContext.Connection.RemoteIpAddress;
 
-            await _logging.InsertLogging(new LoggingRequest
+            _logging.InsertLogging(new LoggingRequest
             {
                 User_type = Consts.USER_TYPE_MEMBER,
                 Is_Call_Api = true,
                 Api_Name = "/api/app/auth/getlist",
-                Actions = "lấy ra list các comment",
+                Actions = "lấy ra list các comment" + username.Value.ToString(),
                 Content = "",
                 Functions = "Hệ thống",
                 Is_Login = true,
@@ -142,12 +142,70 @@ namespace social_network_api.Controllers.Authen
                 IP = remoteIP.ToString()
             });
 
-            return new JsonResult("") { StatusCode = 200 };
+            return new JsonResult(data) { StatusCode = 200 };
+        }
+
+        [Route("listCommentChil")]
+        [HttpPost]
+        public JsonResult GetCommentListChil(CommentRequest commentRequest)
+        {
+            var username = User.Claims.Where(p => p.Type.Equals(ClaimTypes.Name)).FirstOrDefault();
+            var user = _context.Users.Where(u => u.Username == username.Value).FirstOrDefault();
+
+            var data = _listOtherData.GetChil(commentRequest);
+
+            // write log
+            var remoteIP = Request.HttpContext.Connection.RemoteIpAddress;
+
+            _logging.InsertLogging(new LoggingRequest
+            {
+                User_type = Consts.USER_TYPE_MEMBER,
+                Is_Call_Api = true,
+                Api_Name = "/api/app/auth/getlist",
+                Actions = "lấy ra list các comment" + username.Value.ToString(),
+                Content = "",
+                Functions = "Hệ thống",
+                Is_Login = true,
+                Result_Logging = "Thành công",
+                User_Created = "",
+                IP = remoteIP.ToString()
+            });
+
+            return new JsonResult(data) { StatusCode = 200 };
+        }
+
+        [Route("listCommentParent")]
+        [HttpPost]
+        public JsonResult GetCommentListParent(CommentRequest commentRequest)
+        {
+            var username = User.Claims.Where(p => p.Type.Equals(ClaimTypes.Name)).FirstOrDefault();
+            var user = _context.Users.Where(u => u.Username == username.Value).FirstOrDefault();
+
+            var data = _listOtherData.GetListParent(commentRequest);
+
+            // write log
+            var remoteIP = Request.HttpContext.Connection.RemoteIpAddress;
+
+            _logging.InsertLogging(new LoggingRequest
+            {
+                User_type = Consts.USER_TYPE_MEMBER,
+                Is_Call_Api = true,
+                Api_Name = "/api/app/auth/getlist",
+                Actions = "lấy ra list các comment" + username.Value.ToString(),
+                Content = "",
+                Functions = "Hệ thống",
+                Is_Login = true,
+                Result_Logging = "Thành công",
+                User_Created = "",
+                IP = remoteIP.ToString()
+            });
+
+            return new JsonResult(data) { StatusCode = 200 };
         }
 
         [Route("delete")]
         [HttpPost]
-        public async Task<JsonResult> Delete(DeleteRequest deleteRequest)
+        public JsonResult Delete(DeleteRequest deleteRequest)
         {
             var username = User.Claims.Where(p => p.Type.Equals(ClaimTypes.Name)).FirstOrDefault();
             var user = _context.Users.Where(u => u.Username == username.Value).FirstOrDefault();
@@ -157,12 +215,12 @@ namespace social_network_api.Controllers.Authen
 
             var remoteIP = Request.HttpContext.Connection.RemoteIpAddress;
 
-            await _logging.InsertLogging(new LoggingRequest
+            _logging.InsertLogging(new LoggingRequest
             {
                 User_type = Consts.USER_TYPE_MEMBER,
                 Is_Call_Api = true,
                 Api_Name = "/api/app/auth/login",
-                Actions = "xóa comment",
+                Actions = "xóa comment" + deleteRequest.id.ToString(),
                 Content = "",
                 Functions = "Hệ thống",
                 Is_Login = true,
