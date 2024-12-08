@@ -12,7 +12,7 @@ namespace social_network_api.Interfaces.Post
     public interface IPost
     {
         public ApiResponse GetList(int idUser, PostRequest postRequest);
-        public ApiResponse GetDetail(int idUser, PostRequest postRequest);
+        public ApiResponse GetDetail(string username, int id);
         public ApiResponse Create(int idUser, PostRequest postRequest);
         public ApiResponse Update(int idUser, PostRequest postRequest);
         public ApiResponse Delete(int idUser, DeleteRequest id);

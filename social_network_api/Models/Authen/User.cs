@@ -19,6 +19,6 @@ namespace social_network_api.Models.Authen
         public string? Email { get; set; }
         public int Role { get; set; } = 1;
         public string? Address { get; set; }
-        public int User_Group_Id { get; set; }
+        public int? User_Group_Id { get; set; }
     }
 }

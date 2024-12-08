@@ -49,7 +49,9 @@ namespace social_network_api.DataAccess.WebUser
                 data.Id_Friend = req.id;
                 data.Id_User = idUser;
                 data.User_Created = username;
+                data.Status = req.status;
                 data.Date_created = DateTime.Now;
+ 
                 _context.FriendShips.Add(data);
                 _context.SaveChanges();
             }
@@ -112,7 +114,7 @@ namespace social_network_api.DataAccess.WebUser
 
             var listFriend = (from fs in _context.FriendShips
                               join u in _context.Users on fs.Id_User equals u.Id
-                              where fs.Id_User == idUser
+                              where fs.Id_User == idUser && fs.Status == 2
                               select new
                               {
                                   id = u.Id,

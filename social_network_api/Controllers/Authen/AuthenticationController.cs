@@ -51,7 +51,7 @@ namespace social_network_api.Controllers.Authen
         [AllowAnonymous]
         [Route("login")]
         [HttpPost]
-        public async Task<JsonResult> Login(LoginRequest loginRequest)
+        public JsonResult Login(LoginRequest loginRequest)
         {
             var checkUser =  _context.Users.Where(u => u.Username == loginRequest.UserName && u.Status == 1).FirstOrDefault();
 
@@ -85,7 +85,7 @@ namespace social_network_api.Controllers.Authen
             // write log 
 
             var remoteIP = Request.HttpContext.Connection.RemoteIpAddress;
-            await _logging.InsertLogging(new LoggingRequest
+            _logging.InsertLogging(new LoggingRequest
             {
                 User_type = userType,
                 Is_Call_Api = true,
@@ -109,6 +109,7 @@ namespace social_network_api.Controllers.Authen
         public JsonResult Logout()
         {
             var username = User.Claims.Where(p => p.Type.Equals(ClaimTypes.Name)).FirstOrDefault();
+            var userCurrent = _context.Users.Where(x => x.Username == username.ToString()).FirstOrDefault();
 
             var remoteIP = Request.HttpContext.Connection.RemoteIpAddress;
             _logging.InsertLogging(new LoggingRequest
@@ -128,6 +129,9 @@ namespace social_network_api.Controllers.Authen
             return new JsonResult(new ApiResponse(200)) { StatusCode = 200 };
         }
 
+        [AllowAnonymous]
+        [Route("register")]
+        [HttpPost]
         public JsonResult Register(RegisterRequest req)
         {
             var username = User.Claims.Where(p => p.Type.Equals(ClaimTypes.Name)).FirstOrDefault();

@@ -1,6 +1,5 @@
 C:\code\c-sharp\social_network_api\social_network_api\bin\Debug\netcoreapp3.1\appsettings.Development.json
 C:\code\c-sharp\social_network_api\social_network_api\bin\Debug\netcoreapp3.1\appsettings.json
-C:\code\c-sharp\social_network_api\social_network_api\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
 C:\code\c-sharp\social_network_api\social_network_api\bin\Debug\netcoreapp3.1\social_network_api.exe
 C:\code\c-sharp\social_network_api\social_network_api\bin\Debug\netcoreapp3.1\social_network_api.deps.json
 C:\code\c-sharp\social_network_api\social_network_api\bin\Debug\netcoreapp3.1\social_network_api.runtimeconfig.json
@@ -58,9 +57,15 @@ C:\code\c-sharp\social_network_api\social_network_api\obj\Debug\netcoreapp3.1\so
 C:\code\c-sharp\social_network_api\social_network_api\obj\Debug\netcoreapp3.1\social_network_api.csproj.CoreCompileInputs.cache
 C:\code\c-sharp\social_network_api\social_network_api\obj\Debug\netcoreapp3.1\social_network_api.MvcApplicationPartsAssemblyInfo.cache
 C:\code\c-sharp\social_network_api\social_network_api\obj\Debug\netcoreapp3.1\social_network_api.RazorTargetAssemblyInfo.cache
-C:\code\c-sharp\social_network_api\social_network_api\obj\Debug\netcoreapp3.1\social_network_api.csproj.CopyComplete
 C:\code\c-sharp\social_network_api\social_network_api\obj\Debug\netcoreapp3.1\staticwebassets\social_network_api.StaticWebAssets.Manifest.cache
-C:\code\c-sharp\social_network_api\social_network_api\obj\Debug\netcoreapp3.1\staticwebassets\social_network_api.StaticWebAssets.xml
 C:\code\c-sharp\social_network_api\social_network_api\obj\Debug\netcoreapp3.1\social_network_api.dll
 C:\code\c-sharp\social_network_api\social_network_api\obj\Debug\netcoreapp3.1\social_network_api.pdb
 C:\code\c-sharp\social_network_api\social_network_api\obj\Debug\netcoreapp3.1\social_network_api.genruntimeconfig.cache
+C:\code\c-sharp\social_network_api\social_network_api\obj\Debug\netcoreapp3.1\social_network_api.GeneratedMSBuildEditorConfig.editorconfig
+C:\code\c-sharp\social_network_api\social_network_api\obj\Debug\netcoreapp3.1\social_network_api.sourcelink.json
+C:\code\c-sharp\social_network_api\social_network_api\obj\Debug\netcoreapp3.1\staticwebassets\social_network_api.StaticWebAssets.Pack.cache
+C:\code\c-sharp\social_network_api\social_network_api\obj\Debug\netcoreapp3.1\staticwebassets\msbuild.social_network_api.Microsoft.AspNetCore.StaticWebAssets.props
+C:\code\c-sharp\social_network_api\social_network_api\obj\Debug\netcoreapp3.1\staticwebassets\msbuild.build.social_network_api.props
+C:\code\c-sharp\social_network_api\social_network_api\obj\Debug\netcoreapp3.1\staticwebassets\msbuild.buildMultiTargeting.social_network_api.props
+C:\code\c-sharp\social_network_api\social_network_api\obj\Debug\netcoreapp3.1\staticwebassets\msbuild.buildTransitive.social_network_api.props
+C:\code\c-sharp\social_network_api\social_network_api\obj\Debug\netcoreapp3.1\social_n.353DF128.Up2Date

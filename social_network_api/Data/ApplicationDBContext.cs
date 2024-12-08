@@ -26,7 +26,7 @@ namespace social_network_api.Data
         public DbSet<UserGroup> UserGroups { get; set; }
         public DbSet<UserGroupPermission> UserGroupPermissions { get; set; }
         public DbSet<UserPermission> UserPermissions { get; set; }
-        public DbSet<Comment> Commands { get; set; }
+        public DbSet<Comment> Comments { get; set; }
         public DbSet<CommentLike> CommandLikes { get; set; }
         public DbSet<Logging> Loggings { get; set; }
         public DbSet<Notification> Notifications { get; set; }
@@ -40,7 +40,7 @@ namespace social_network_api.Data
         public DbSet<Post> Posts { get; set; }
         public DbSet<PostLike> PostLikes { get; set; }
         public DbSet<PostShare> PostShares { get; set; }
-
+        public DbSet<RequestFriend> RequestFriends { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -51,8 +51,8 @@ namespace social_network_api.Data
             modelBuilder.Entity<UserGroup>().ToTable("UserGroup").HasKey(v => v.Id);
             modelBuilder.Entity<UserGroupPermission>().ToTable("UserGroupPermission").HasKey(v => v.Id);
             modelBuilder.Entity<UserPermission>().ToTable("UserPermission").HasKey(v => v.Id);
-            modelBuilder.Entity<Comment>().ToTable("Command").HasKey(v => v.Id);
-            modelBuilder.Entity<CommentLike>().ToTable("CommandLike").HasKey(v => v.Id);
+            modelBuilder.Entity<Comment>().ToTable("Comment").HasKey(v => v.Id);
+            modelBuilder.Entity<CommentLike>().ToTable("CommentLike").HasKey(v => v.Id);
             modelBuilder.Entity<Logging>().ToTable("Logging").HasKey(v => v.Id);
             modelBuilder.Entity<Notification>().ToTable("Notification").HasKey(v => v.Id);
             modelBuilder.Entity<Education>().ToTable("Education").HasKey(v => v.Id);
@@ -65,7 +65,8 @@ namespace social_network_api.Data
             modelBuilder.Entity<Post>().ToTable("Post").HasKey(v => v.Id);
             modelBuilder.Entity<PostLike>().ToTable("PostLike").HasKey(v => v.Id);
             modelBuilder.Entity<PostShare>().ToTable("PostShare").HasKey(v => v.Id);
-            
+            modelBuilder.Entity<RequestFriend>().ToTable("RequestFriend").HasKey(v => v.Id);
+
         }
     }
 }

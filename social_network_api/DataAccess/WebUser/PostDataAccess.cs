@@ -32,6 +32,11 @@ namespace social_network_api.DataAccess.WebUser
                 return new ApiResponse("NO_USER");
             }
 
+            if (postRequest == null)
+            {
+                return new ApiResponse("POST_CONTENT_MISSING");
+            }
+
             using(var transaction = _context.Database.BeginTransaction())
             {
                 var data = new Post();
@@ -70,19 +75,26 @@ namespace social_network_api.DataAccess.WebUser
             return new ApiResponse(200);
         }
 
-        public ApiResponse GetDetail(int idUser, PostRequest postRequest)
+        public ApiResponse GetDetail(string username, int id)
         {
-            if (idUser == null)
+            if (username == null)
             {
-                return new ApiResponse("NO_USER");
+                return new ApiResponse("ERROR_USER_MISSING");
             }
 
-            if (postRequest.Id == null)
+            if (id == null)
             {
                 return new ApiResponse("ERROR_IDPOST_NOT_EXISTS");
             }
 
+            var user = _context.Users.Where(u => u.Username == username).FirstOrDefault();
+            if (user == null)
+            {
+                return new ApiResponse("ERROR_USERNAME_NOT_EXISTS");
+            }
+
             var dataResult = (from p in _context.Posts
+                              where p.Id_User == user.Id && p.Id == id
                              select new
                              {
                                  id = p.Id,
@@ -116,12 +128,9 @@ namespace social_network_api.DataAccess.WebUser
                 return new ApiResponse("ERROR_IDUSER_NOT_EXISTS");
             }
 
-            if (postRequest.Id == null)
-            {
-                return new ApiResponse("ERROR_IDPOST_NOT_EXISTS");
-            }
 
             var posts = (from p in _context.Posts
+                         where p.Id_User == idUser
                          select new
                          {
                              id = p.Id,

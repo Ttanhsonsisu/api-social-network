@@ -8,6 +8,6 @@ namespace social_network_api.Helpers
 {
     public interface ILoggingHelpers
     {
-        public Task<Task> InsertLogging(LoggingRequest longgingRequest );
+        public Task InsertLogging(LoggingRequest longgingRequest );
     }
 }

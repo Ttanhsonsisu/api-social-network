@@ -6,9 +6,11 @@ using social_network_api.DataObjects.Response;
 using social_network_api.Helpers;
 using social_network_api.Interfaces.Info;
 using social_network_api.Models.Authen;
+using social_network_api.Models.Info;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography.Xml;
 using System.Threading.Tasks;
 
 namespace social_network_api.DataAccess.WebUser
@@ -52,20 +54,32 @@ namespace social_network_api.DataAccess.WebUser
                 return new ApiResponse("ERROR_MISSING_PASSWORD");
             }
             // checkdup username
-            var usernameSame = _context.Users.Where(x => x.Username == req.Username).DefaultIfEmpty();
+            var usernameSame = _context.Users.Where(x => x.Username == req.Username).FirstOrDefault();
             if (usernameSame != null)
             {
                 return new ApiResponse("ERROR_USERNAME_EXIST");
             }
 
-            var emailSame = _context.Users.Where(x => x.Email == req.Email).DefaultIfEmpty();
+            var emailSame = _context.Users.Where(x => x.Email == req.Email).FirstOrDefault();
             if (emailSame != null)
             {
                 return new ApiResponse("ERROR_EMAIL_EXIST");
             }
-            
+
+            var transaction = _context.Database.BeginTransaction();
             try
             {
+                var dataProfile = new Profile();
+                dataProfile.Address = req.Address;
+                dataProfile.User_Created = req.Username;
+                dataProfile.User_Updated = req.Username;
+                dataProfile.Date_Created = DateTime.Now;
+                dataProfile.Date_Updated = DateTime.Now;
+                _context.Profiles.Add(dataProfile);
+                _context.SaveChanges();
+
+                var idProfileUserCreated = _context.Profiles.Select(x => x.Id).OrderByDescending(x => x).FirstOrDefault();
+                
                 var dataCreate = new User();
                 dataCreate.Username = req.Username;
                 dataCreate.Address = req.Address;
@@ -78,14 +92,21 @@ namespace social_network_api.DataAccess.WebUser
                 dataCreate.Status = 1;
                 dataCreate.User_Created = req.Username;
                 dataCreate.User_Updated = req.Username;
+                dataCreate.Id_Profile = idProfileUserCreated;
 
                 _context.Users.Add(dataCreate);
                 _context.SaveChanges();
             }
             catch (Exception ex)
             {
+                transaction.Rollback();
+                transaction.Dispose();
                 return new ApiResponse(ex.Message.ToUpper());
             }
+
+            transaction.Commit();
+            transaction.Dispose();
+
             return new ApiResponse(200);
         }
 

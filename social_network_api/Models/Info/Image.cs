@@ -12,7 +12,7 @@ namespace social_network_api.Models.Info
         public int Id { get; set; }
         public string? title { get; set; }
         public string Url { get; set; }
-        public string? Size_Img { get; set; } = String.Empty;
+        public string? Size { get; set; } = String.Empty;
         public bool Is_Active { get; set; } = true;
 
     }
