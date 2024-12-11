@@ -90,6 +90,10 @@ namespace social_network_api
             services.AddScoped<IFriend, FriendDataAccess>();
             services.AddScoped<IUser, UserDataAccess>(); 
             services.AddScoped<IPost, PostDataAccess>();
+            services.AddScoped<IProfile, ProfileDataAccess>();
+
+            // add http Client test fetch api
+            services.AddHttpClient();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

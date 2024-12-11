@@ -14,5 +14,7 @@ namespace social_network_api.Interfaces.AddFriend
         public ApiResponse AddFriend(int idUser, FriendRequest req, string username);
         public ApiResponse DeleteFriend(int idUser, DeleteRequest req);
         public ApiResponse UpdateStatus(int idUser, FriendRequest req);
+        public ApiResponse ChangeStatusFriend(string username, FriendRequest request);
+        public ApiResponse GetCountFriend(string username);
     }
 }

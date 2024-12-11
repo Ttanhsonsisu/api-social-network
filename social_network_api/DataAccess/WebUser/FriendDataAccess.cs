@@ -1,4 +1,5 @@
-﻿using social_network_api.Data;
+﻿using Microsoft.EntityFrameworkCore.Query.SqlExpressions;
+using social_network_api.Data;
 using social_network_api.DataObjects.Request.Authen;
 using social_network_api.DataObjects.Request.Common;
 using social_network_api.DataObjects.Response;
@@ -63,6 +64,33 @@ namespace social_network_api.DataAccess.WebUser
             return new ApiResponse(200);
         }
 
+        public ApiResponse ChangeStatusFriend(string username, FriendRequest request)
+        {
+            if (username  == null)
+            {
+                return new ApiResponse("ERROR_MISSING_USERNAME");
+            }
+
+            var dataChangeStatus = _context.FriendShips.Where(f => f.Id == request.id).FirstOrDefault();
+            if ( request.status == dataChangeStatus.Status )
+            {
+                return new ApiResponse("ERROR_STATUS_IS_NOT_CHANGE");
+            }
+
+            try
+            {
+                dataChangeStatus.Status = request.status;
+                _context.SaveChanges();
+            }
+            catch (Exception ex)
+            {
+
+                return new ApiResponse(ex.Message);
+            }
+
+            return new ApiResponse(200);
+        }
+
         public ApiResponse DeleteFriend(int idUser, DeleteRequest req )
         {
             if (idUser == null)
@@ -91,6 +119,25 @@ namespace social_network_api.DataAccess.WebUser
                 return new ApiResponse("DELETE_FAIL");
             }
             return new ApiResponse(200);
+        }
+
+        public ApiResponse GetCountFriend(string username)
+        {
+            if (username == null) 
+            {
+                return new ApiResponse("ERROR_MISSING_USERNAME");
+            }
+
+            var data = (from fs in _context.FriendShips
+                        join u in _context.Users on fs.Id_User equals u.Id
+                        where u.Username == username
+                        select new
+                        {
+                            id = fs.Id
+                        }
+                       ).ToList().Count();
+
+            return new ApiResponse(data);
         }
 
         public ApiResponse GetList(int idUser , FriendRequest req)
@@ -141,5 +188,7 @@ namespace social_network_api.DataAccess.WebUser
         {
             throw new NotImplementedException();
         }
+
+
     }
 }
