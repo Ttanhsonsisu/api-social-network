@@ -26,9 +26,30 @@ namespace social_network_api.DataAccess.WebUser
             _commonFunction = commonFunction;
         }
 
+        public ApiResponse ChangePassword(string username, ChangePasswordRequest req)
+        {
+            throw new NotImplementedException();
+        }
+
         public ApiResponse Delete(DeleteRequest delReq)
         {
             throw new NotImplementedException();
+        }
+
+        public ApiResponse Get(string username)
+        {
+            if (username == null)
+            {
+                return new ApiResponse("ERROR_USERNAME_MISSING");
+            }
+
+            var data = _context.Users.Where(u => u.Username == username).FirstOrDefault();
+            if ( data == null)
+            {
+                return new ApiResponse("ERROR_USERNAME_NOT_EXISTS");                
+            }
+
+            return new ApiResponse(data);
         }
 
         public ApiResponse Register(RegisterRequest req)
@@ -111,6 +132,11 @@ namespace social_network_api.DataAccess.WebUser
         }
 
         public ApiResponse Update(UserRequest req)
+        {
+            throw new NotImplementedException();
+        }
+
+        public ApiResponse UpdateBase(string username, UserRequest req)
         {
             throw new NotImplementedException();
         }

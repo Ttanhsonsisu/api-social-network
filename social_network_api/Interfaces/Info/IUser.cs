@@ -14,6 +14,10 @@ namespace social_network_api.Interfaces.Info
         public ApiResponse Register(RegisterRequest req);
         public ApiResponse Delete(DeleteRequest delReq);
         public ApiResponse Update(UserRequest req);
+        public ApiResponse Get(string username);
+        public ApiResponse UpdateBase(string username, UserRequest req);
+        public ApiResponse ChangePassword(string username, ChangePasswordRequest req);
+       
 
     }
 }
