@@ -48,7 +48,7 @@ namespace social_network_api.Controllers.Authen
             return new JsonResult(new ApiResponse(resultTest)) { StatusCode = 200 };
         }
 
-        [AllowAnonymous]
+
         [Route("login")]
         [HttpPost]
         public JsonResult Login(LoginRequest loginRequest)
