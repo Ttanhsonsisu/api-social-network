@@ -9,6 +9,7 @@ using social_network_api.Interfaces.AddFriend;
 using social_network_api.Models.NetWork;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -87,6 +88,37 @@ namespace social_network_api.DataAccess.WebUser
 
                 return new ApiResponse(ex.Message);
             }
+
+            return new ApiResponse(200);
+        }
+
+        public ApiResponse ConfirmRequestFriend(string username, FriendRequest req)
+        {
+            if (string.IsNullOrEmpty(username))
+            {
+                return new ApiResponse("ERROR_MISSING_USERNAME");
+            }
+
+            if (req.id == null)
+            {
+                return new ApiResponse("ERRORO_MISSING_ID_FRIEND");
+            }
+
+            // check username exists
+            var dataUser = _context.Users.Where(e => e.Username == username).FirstOrDefault();
+            if (dataUser == null)
+            {
+                return new ApiResponse("ERROR_USERNAME_NOT_EXISTS");
+            }
+
+            var dataUserFriend = _context.FriendShips.Where(e => e.Id_Friend == req.id && e.Id_User == dataUser.Id).FirstOrDefault();
+            if (dataUserFriend == null)
+            {
+                return new ApiResponse("ERROR_FRIEND_NOT_EXISTS");
+            }
+
+            dataUserFriend.Status = 2;
+            _context.SaveChanges();
 
             return new ApiResponse(200);
         }
@@ -184,9 +216,82 @@ namespace social_network_api.DataAccess.WebUser
             return new ApiResponse(dataResult);
         }
 
+        public ApiResponse GetListRequestFriend(string username, FriendRequest req)
+        {
+            if (username == null)
+            {
+                return new ApiResponse("ERROR_MISSING_USER_NAME");
+            }
+
+            var dataUser = _context.Users.Where(e => e.Username == username).FirstOrDefault();
+            if (dataUser == null) 
+            {
+                return new ApiResponse("ERROR_USERNAME_NOT_EXISTS");
+            }
+            // Default page_no, page_size
+            if (req.page_size < 1)
+            {
+                req.page_size = Consts.PAGE_SIZE;
+            }
+
+            if (req.page_no < 1)
+            {
+                req.page_no = 1;
+            }
+            // Số lượng Skip
+            int skipElements = (req.page_no - 1) * req.page_size;
+
+            var listFriend = (from r in _context.FriendShips
+                              join us in _context.Users on r.Id_Friend equals us.Id
+                              where r.Id_User == dataUser.Id && r.Status == 1
+                              orderby r.Date_created descending
+                              select new
+                              {
+                                 id = r.Id_Friend,
+                                 name = us.Full_Name,
+                                 username = us.Username,
+                                 dateCreated = us.Date_Created,
+                              }
+                              );
+
+            int countElements = listFriend.Count();
+
+            int totalPage = countElements > 0
+                    ? (int)Math.Ceiling(countElements / (double)req.page_size)
+                    : 0;
+
+            var dataList = listFriend.Take(req.page_size * req.page_no).Skip(skipElements).ToList();
+            var dataResult = new DataListRespone { Page_no = req.page_no, Page_Size = req.page_size, Total_elements = countElements, Total_page = totalPage, Data = dataList };
+            return new ApiResponse(dataResult);
+        }
+
         public ApiResponse UpdateStatus(int idUser, FriendRequest req)
         {
-            throw new NotImplementedException();
+            if (idUser == null )
+            {
+                return new ApiResponse("ERROR_MISSING_ID_USER");
+            }
+
+            if (req.status == null)
+            {
+                return new ApiResponse("ERROR_MISSING_STATUS");
+            }
+
+            if (req.id == null) 
+            {
+                return new ApiResponse("ERRORO_MISSING_ID_FRIEND");
+            }
+
+            var dataUserFriend = _context.FriendShips.Where(e => e.Id_Friend == req.id && e.Id_User == idUser).FirstOrDefault();
+            if (dataUserFriend == null)
+            {
+                return new ApiResponse("ERROR_FRIEND_NOT_EXISTS");
+            }
+
+            dataUserFriend.Status = req.status;
+            _context.SaveChanges();
+
+            return new ApiResponse(dataUserFriend);
         }
 
 

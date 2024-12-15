@@ -62,7 +62,7 @@ namespace social_network_api.Controllers.Authen
 
         [Route("remove")]
         [HttpPost]
-        public async Task<JsonResult> Remove(DeleteRequest req)
+        public JsonResult Remove(DeleteRequest req)
         {
             var username = User.Claims.Where(p => p.Type.Equals(ClaimTypes.Name)).FirstOrDefault();
             var user = _context.Users.Where(u => u.Username == username.Value).FirstOrDefault();
@@ -71,7 +71,7 @@ namespace social_network_api.Controllers.Authen
 
             var remoteIP = Request.HttpContext.Connection.RemoteIpAddress;
 
-            await _logging.InsertLogging(new LoggingRequest
+            _logging.InsertLogging(new LoggingRequest
             {
                 User_type = Consts.USER_TYPE_MEMBER,
                 Is_Call_Api = true,
@@ -105,6 +105,61 @@ namespace social_network_api.Controllers.Authen
                 Is_Call_Api = true,
                 Api_Name = "/api/app/friendShip/list",
                 Actions = "list danh sách bạn bè",
+                Content = "",
+                Functions = "Hệ thống",
+                Is_Login = true,
+                Result_Logging = "Thành công",
+                User_Created = "",
+                IP = remoteIP.ToString()
+            });
+
+            return new JsonResult(data) { StatusCode = 200 };
+        }
+
+        [Route("listRequestAddFriend")]
+        [HttpPost]
+        public  JsonResult ListRequestAddFriend(FriendRequest friendRequest)
+        {
+            var username = User.Claims.Where(p => p.Type.Equals(ClaimTypes.Name)).FirstOrDefault();
+  
+
+            var data = _listOtherData.GetListRequestFriend(username.Value.ToString(), friendRequest);
+
+            var remoteIP = Request.HttpContext.Connection.RemoteIpAddress;
+
+             _logging.InsertLogging(new LoggingRequest
+            {
+                User_type = Consts.USER_TYPE_MEMBER,
+                Is_Call_Api = true,
+                Api_Name = "/api/app/friendShip/listRequestAddFriend",
+                Actions = "list danh sách yêu cầu kết bạn",
+                Content = "",
+                Functions = "Hệ thống",
+                Is_Login = true,
+                Result_Logging = "Thành công",
+                User_Created = "",
+                IP = remoteIP.ToString()
+            });
+
+            return new JsonResult(data) { StatusCode = 200 };
+        }
+
+        [Route("changeStatusFriend")]
+        [HttpPost]
+        public JsonResult ChangeStatusFriend(FriendRequest friendRequest)
+        {
+            var username = User.Claims.Where(p => p.Type.Equals(ClaimTypes.Name)).FirstOrDefault();
+
+            var data = _listOtherData.ChangeStatusFriend(username.Value.ToString(), friendRequest);
+
+            var remoteIP = Request.HttpContext.Connection.RemoteIpAddress;
+
+            _logging.InsertLogging(new LoggingRequest
+            {
+                User_type = Consts.USER_TYPE_MEMBER,
+                Is_Call_Api = true,
+                Api_Name = "/api/app/friendShip/changeStatusFriend",
+                Actions = "đổi trạng thái kết bạn",
                 Content = "",
                 Functions = "Hệ thống",
                 Is_Login = true,
