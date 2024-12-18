@@ -95,6 +95,8 @@ namespace social_network_api
             services.AddScoped<IUser, UserDataAccess>(); 
             services.AddScoped<IPost, PostDataAccess>();
             services.AddScoped<IProfile, ProfileDataAccess>();
+            services.AddScoped<IEducation, EducatonDataAccess>();
+
 
             // add http Client test fetch api
             services.AddHttpClient();

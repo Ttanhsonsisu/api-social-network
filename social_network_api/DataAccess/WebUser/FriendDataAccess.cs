@@ -48,18 +48,18 @@ namespace social_network_api.DataAccess.WebUser
             try
             {
                 var data = new FriendShip();
-                data.Id_Friend = req.id;
-                data.Id_User = idUser;
+                data.Id_Friend = Convert.ToInt32( req.id);
+                data.Id_User = Convert.ToInt32(idUser);
                 data.User_Created = username;
                 data.Status = req.status;
                 data.Date_created = DateTime.Now;
- 
+                data.User_Created = username;
                 _context.FriendShips.Add(data);
                 _context.SaveChanges();
             }
             catch (Exception ex)
             {
-                return new ApiResponse("ERROR_ADD_FAIL");
+                return new ApiResponse("ERROR_ADD_FAIL" + ex.Message.ToString());
             }
 
             return new ApiResponse(200);

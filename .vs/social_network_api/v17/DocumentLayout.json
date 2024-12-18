@@ -13,6 +13,70 @@
     {
       "AbsoluteMoniker": "D:0:0:{0401544C-CFD1-4748-9280-BDFA6FEEAE0E}|social_network_api\\social_network_api.csproj|c:\\code\\c-sharp\\social_network_api\\social_network_api\\controllers\\authen\\friendcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0401544C-CFD1-4748-9280-BDFA6FEEAE0E}|social_network_api\\social_network_api.csproj|solutionrelative:social_network_api\\controllers\\authen\\friendcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0401544C-CFD1-4748-9280-BDFA6FEEAE0E}|social_network_api\\social_network_api.csproj|c:\\code\\c-sharp\\social_network_api\\social_network_api\\dataaccess\\webuser\\educatondataaccess.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0401544C-CFD1-4748-9280-BDFA6FEEAE0E}|social_network_api\\social_network_api.csproj|solutionrelative:social_network_api\\dataaccess\\webuser\\educatondataaccess.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0401544C-CFD1-4748-9280-BDFA6FEEAE0E}|social_network_api\\social_network_api.csproj|c:\\code\\c-sharp\\social_network_api\\social_network_api\\startup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0401544C-CFD1-4748-9280-BDFA6FEEAE0E}|social_network_api\\social_network_api.csproj|solutionrelative:social_network_api\\startup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0401544C-CFD1-4748-9280-BDFA6FEEAE0E}|social_network_api\\social_network_api.csproj|c:\\code\\c-sharp\\social_network_api\\social_network_api\\controllers\\authen\\educationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0401544C-CFD1-4748-9280-BDFA6FEEAE0E}|social_network_api\\social_network_api.csproj|solutionrelative:social_network_api\\controllers\\authen\\educationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0401544C-CFD1-4748-9280-BDFA6FEEAE0E}|social_network_api\\social_network_api.csproj|c:\\code\\c-sharp\\social_network_api\\social_network_api\\controllers\\authen\\postcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0401544C-CFD1-4748-9280-BDFA6FEEAE0E}|social_network_api\\social_network_api.csproj|solutionrelative:social_network_api\\controllers\\authen\\postcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0401544C-CFD1-4748-9280-BDFA6FEEAE0E}|social_network_api\\social_network_api.csproj|c:\\code\\c-sharp\\social_network_api\\social_network_api\\controllers\\authen\\commentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0401544C-CFD1-4748-9280-BDFA6FEEAE0E}|social_network_api\\social_network_api.csproj|solutionrelative:social_network_api\\controllers\\authen\\commentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0401544C-CFD1-4748-9280-BDFA6FEEAE0E}|social_network_api\\social_network_api.csproj|c:\\code\\c-sharp\\social_network_api\\social_network_api\\controllers\\authen\\authenticationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0401544C-CFD1-4748-9280-BDFA6FEEAE0E}|social_network_api\\social_network_api.csproj|solutionrelative:social_network_api\\controllers\\authen\\authenticationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0401544C-CFD1-4748-9280-BDFA6FEEAE0E}|social_network_api\\social_network_api.csproj|c:\\code\\c-sharp\\social_network_api\\social_network_api\\models\\info\\usereducation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0401544C-CFD1-4748-9280-BDFA6FEEAE0E}|social_network_api\\social_network_api.csproj|solutionrelative:social_network_api\\models\\info\\usereducation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0401544C-CFD1-4748-9280-BDFA6FEEAE0E}|social_network_api\\social_network_api.csproj|c:\\code\\c-sharp\\social_network_api\\social_network_api\\dataobjects\\request\\authen\\educationrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0401544C-CFD1-4748-9280-BDFA6FEEAE0E}|social_network_api\\social_network_api.csproj|solutionrelative:social_network_api\\dataobjects\\request\\authen\\educationrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0401544C-CFD1-4748-9280-BDFA6FEEAE0E}|social_network_api\\social_network_api.csproj|c:\\code\\c-sharp\\social_network_api\\social_network_api\\models\\info\\education.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0401544C-CFD1-4748-9280-BDFA6FEEAE0E}|social_network_api\\social_network_api.csproj|solutionrelative:social_network_api\\models\\info\\education.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0401544C-CFD1-4748-9280-BDFA6FEEAE0E}|social_network_api\\social_network_api.csproj|c:\\code\\c-sharp\\social_network_api\\social_network_api\\controllers\\cms\\authen\\authenticationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0401544C-CFD1-4748-9280-BDFA6FEEAE0E}|social_network_api\\social_network_api.csproj|solutionrelative:social_network_api\\controllers\\cms\\authen\\authenticationcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0401544C-CFD1-4748-9280-BDFA6FEEAE0E}|social_network_api\\social_network_api.csproj|c:\\code\\c-sharp\\social_network_api\\social_network_api\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{0401544C-CFD1-4748-9280-BDFA6FEEAE0E}|social_network_api\\social_network_api.csproj|solutionrelative:social_network_api\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0401544C-CFD1-4748-9280-BDFA6FEEAE0E}|social_network_api\\social_network_api.csproj|c:\\code\\c-sharp\\social_network_api\\social_network_api\\models\\info\\profile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0401544C-CFD1-4748-9280-BDFA6FEEAE0E}|social_network_api\\social_network_api.csproj|solutionrelative:social_network_api\\models\\info\\profile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0401544C-CFD1-4748-9280-BDFA6FEEAE0E}|social_network_api\\social_network_api.csproj|c:\\code\\c-sharp\\social_network_api\\social_network_api\\dataaccess\\webuser\\commentdataaccess.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0401544C-CFD1-4748-9280-BDFA6FEEAE0E}|social_network_api\\social_network_api.csproj|solutionrelative:social_network_api\\dataaccess\\webuser\\commentdataaccess.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0401544C-CFD1-4748-9280-BDFA6FEEAE0E}|social_network_api\\social_network_api.csproj|c:\\code\\c-sharp\\social_network_api\\social_network_api\\controllers\\testresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0401544C-CFD1-4748-9280-BDFA6FEEAE0E}|social_network_api\\social_network_api.csproj|solutionrelative:social_network_api\\controllers\\testresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0401544C-CFD1-4748-9280-BDFA6FEEAE0E}|social_network_api\\social_network_api.csproj|c:\\code\\c-sharp\\social_network_api\\social_network_api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{0401544C-CFD1-4748-9280-BDFA6FEEAE0E}|social_network_api\\social_network_api.csproj|solutionrelative:social_network_api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0401544C-CFD1-4748-9280-BDFA6FEEAE0E}|social_network_api\\social_network_api.csproj|c:\\code\\c-sharp\\social_network_api\\social_network_api\\controllers\\common\\uploadmediacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0401544C-CFD1-4748-9280-BDFA6FEEAE0E}|social_network_api\\social_network_api.csproj|solutionrelative:social_network_api\\controllers\\common\\uploadmediacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,20 +86,31 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "FriendDataAccess.cs",
-              "DocumentMoniker": "C:\\code\\c-sharp\\social_network_api\\social_network_api\\DataAccess\\WebUser\\FriendDataAccess.cs",
-              "RelativeDocumentMoniker": "social_network_api\\DataAccess\\WebUser\\FriendDataAccess.cs",
-              "ToolTip": "C:\\code\\c-sharp\\social_network_api\\social_network_api\\DataAccess\\WebUser\\FriendDataAccess.cs",
-              "RelativeToolTip": "social_network_api\\DataAccess\\WebUser\\FriendDataAccess.cs",
-              "ViewState": "AQIAAEAAAAAAAAAAAAAlwEsAAAAfAAAA",
+              "DocumentIndex": 8,
+              "Title": "AuthenticationController.cs",
+              "DocumentMoniker": "C:\\code\\c-sharp\\social_network_api\\social_network_api\\Controllers\\Authen\\AuthenticationController.cs",
+              "RelativeDocumentMoniker": "social_network_api\\Controllers\\Authen\\AuthenticationController.cs",
+              "ToolTip": "C:\\code\\c-sharp\\social_network_api\\social_network_api\\Controllers\\Authen\\AuthenticationController.cs",
+              "RelativeToolTip": "social_network_api\\Controllers\\Authen\\AuthenticationController.cs",
+              "ViewState": "AQIAADUAAAAAAAAAAAAmwAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-15T05:52:22.792Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-16T07:58:00.015Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "PostController.cs",
+              "DocumentMoniker": "C:\\code\\c-sharp\\social_network_api\\social_network_api\\Controllers\\Authen\\PostController.cs",
+              "RelativeDocumentMoniker": "social_network_api\\Controllers\\Authen\\PostController.cs",
+              "ToolTip": "C:\\code\\c-sharp\\social_network_api\\social_network_api\\Controllers\\Authen\\PostController.cs",
+              "RelativeToolTip": "social_network_api\\Controllers\\Authen\\PostController.cs",
+              "ViewState": "AQIAAE0AAAAAAAAAAAAgwFsAAAAgAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-17T09:29:45.093Z"
             },
             {
               "$type": "Document",
@@ -45,14 +120,22 @@
               "RelativeDocumentMoniker": "social_network_api\\Interfaces\\AddFriend\\IFriend.cs",
               "ToolTip": "C:\\code\\c-sharp\\social_network_api\\social_network_api\\Interfaces\\AddFriend\\IFriend.cs",
               "RelativeToolTip": "social_network_api\\Interfaces\\AddFriend\\IFriend.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAiwBAAAAAbAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAwwAwAAAAbAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-15T05:51:37.684Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-15T05:51:37.684Z"
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "FriendDataAccess.cs",
+              "DocumentMoniker": "C:\\code\\c-sharp\\social_network_api\\social_network_api\\DataAccess\\WebUser\\FriendDataAccess.cs",
+              "RelativeDocumentMoniker": "social_network_api\\DataAccess\\WebUser\\FriendDataAccess.cs",
+              "ToolTip": "C:\\code\\c-sharp\\social_network_api\\social_network_api\\DataAccess\\WebUser\\FriendDataAccess.cs",
+              "RelativeToolTip": "social_network_api\\DataAccess\\WebUser\\FriendDataAccess.cs",
+              "ViewState": "AQIAAAIBAAAAAAAAAAArwCcBAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-15T05:52:22.792Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -62,10 +145,177 @@
               "RelativeDocumentMoniker": "social_network_api\\Controllers\\Authen\\FriendController.cs",
               "ToolTip": "C:\\code\\c-sharp\\social_network_api\\social_network_api\\Controllers\\Authen\\FriendController.cs",
               "RelativeToolTip": "social_network_api\\Controllers\\Authen\\FriendController.cs",
-              "ViewState": "AQIAAI0AAAAAAAAAAAAQwJgAAAA4AAAA",
+              "ViewState": "AQIAAFMAAAAAAAAAAAAYwGEAAAAtAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-15T05:51:20.705Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-15T05:51:20.705Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "EducationController.cs",
+              "DocumentMoniker": "C:\\code\\c-sharp\\social_network_api\\social_network_api\\Controllers\\Authen\\EducationController.cs",
+              "RelativeDocumentMoniker": "social_network_api\\Controllers\\Authen\\EducationController.cs",
+              "ToolTip": "C:\\code\\c-sharp\\social_network_api\\social_network_api\\Controllers\\Authen\\EducationController.cs",
+              "RelativeToolTip": "social_network_api\\Controllers\\Authen\\EducationController.cs",
+              "ViewState": "AQIAABIAAAAAAAAAAAAAAB4AAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-18T09:50:47.77Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "EducatonDataAccess.cs",
+              "DocumentMoniker": "C:\\code\\c-sharp\\social_network_api\\social_network_api\\DataAccess\\WebUser\\EducatonDataAccess.cs",
+              "RelativeDocumentMoniker": "social_network_api\\DataAccess\\WebUser\\EducatonDataAccess.cs",
+              "ToolTip": "C:\\code\\c-sharp\\social_network_api\\social_network_api\\DataAccess\\WebUser\\EducatonDataAccess.cs",
+              "RelativeToolTip": "social_network_api\\DataAccess\\WebUser\\EducatonDataAccess.cs",
+              "ViewState": "AQIAADsAAAAAAAAAAIA3wCYAAAAQAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-15T12:30:19.097Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Startup.cs",
+              "DocumentMoniker": "C:\\code\\c-sharp\\social_network_api\\social_network_api\\Startup.cs",
+              "RelativeDocumentMoniker": "social_network_api\\Startup.cs",
+              "ToolTip": "C:\\code\\c-sharp\\social_network_api\\social_network_api\\Startup.cs",
+              "RelativeToolTip": "social_network_api\\Startup.cs",
+              "ViewState": "AQIAAFQAAAAAAAAAAAAYwGMAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-15T06:05:56.421Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "CommentController.cs",
+              "DocumentMoniker": "C:\\code\\c-sharp\\social_network_api\\social_network_api\\Controllers\\Authen\\CommentController.cs",
+              "RelativeDocumentMoniker": "social_network_api\\Controllers\\Authen\\CommentController.cs",
+              "ToolTip": "C:\\code\\c-sharp\\social_network_api\\social_network_api\\Controllers\\Authen\\CommentController.cs",
+              "RelativeToolTip": "social_network_api\\Controllers\\Authen\\CommentController.cs",
+              "ViewState": "AQIAACMAAAAAAAAAAADwvzoAAAA9AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-15T12:53:09.898Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "UserEducation.cs",
+              "DocumentMoniker": "C:\\code\\c-sharp\\social_network_api\\social_network_api\\Models\\Info\\UserEducation.cs",
+              "RelativeDocumentMoniker": "social_network_api\\Models\\Info\\UserEducation.cs",
+              "ToolTip": "C:\\code\\c-sharp\\social_network_api\\social_network_api\\Models\\Info\\UserEducation.cs",
+              "RelativeToolTip": "social_network_api\\Models\\Info\\UserEducation.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAuwBEAAAATAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-18T09:38:50.366Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "EducationRequest.cs",
+              "DocumentMoniker": "C:\\code\\c-sharp\\social_network_api\\social_network_api\\DataObjects\\Request\\Authen\\EducationRequest.cs",
+              "RelativeDocumentMoniker": "social_network_api\\DataObjects\\Request\\Authen\\EducationRequest.cs",
+              "ToolTip": "C:\\code\\c-sharp\\social_network_api\\social_network_api\\DataObjects\\Request\\Authen\\EducationRequest.cs",
+              "RelativeToolTip": "social_network_api\\DataObjects\\Request\\Authen\\EducationRequest.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAuwBAAAAAtAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-17T01:15:40.201Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Education.cs",
+              "DocumentMoniker": "C:\\code\\c-sharp\\social_network_api\\social_network_api\\Models\\Info\\Education.cs",
+              "RelativeDocumentMoniker": "social_network_api\\Models\\Info\\Education.cs",
+              "ToolTip": "C:\\code\\c-sharp\\social_network_api\\social_network_api\\Models\\Info\\Education.cs",
+              "RelativeToolTip": "social_network_api\\Models\\Info\\Education.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-18T09:39:08.313Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "AuthenticationController.cs",
+              "DocumentMoniker": "C:\\code\\c-sharp\\social_network_api\\social_network_api\\Controllers\\cms\\Authen\\AuthenticationController.cs",
+              "RelativeDocumentMoniker": "social_network_api\\Controllers\\cms\\Authen\\AuthenticationController.cs",
+              "ToolTip": "C:\\code\\c-sharp\\social_network_api\\social_network_api\\Controllers\\cms\\Authen\\AuthenticationController.cs",
+              "RelativeToolTip": "social_network_api\\Controllers\\cms\\Authen\\AuthenticationController.cs",
+              "ViewState": "AQIAAGwAAAAAAAAAAAAYwBsAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-18T09:09:13.718Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "C:\\code\\c-sharp\\social_network_api\\social_network_api\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "social_network_api\\Properties\\launchSettings.json",
+              "ToolTip": "C:\\code\\c-sharp\\social_network_api\\social_network_api\\Properties\\launchSettings.json",
+              "RelativeToolTip": "social_network_api\\Properties\\launchSettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAWAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-12-15T15:45:58.229Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Profile.cs",
+              "DocumentMoniker": "C:\\code\\c-sharp\\social_network_api\\social_network_api\\Models\\Info\\Profile.cs",
+              "RelativeDocumentMoniker": "social_network_api\\Models\\Info\\Profile.cs",
+              "ToolTip": "C:\\code\\c-sharp\\social_network_api\\social_network_api\\Models\\Info\\Profile.cs",
+              "RelativeToolTip": "social_network_api\\Models\\Info\\Profile.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-18T09:45:14.53Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "CommentDataAccess.cs",
+              "DocumentMoniker": "C:\\code\\c-sharp\\social_network_api\\social_network_api\\DataAccess\\WebUser\\CommentDataAccess.cs",
+              "RelativeDocumentMoniker": "social_network_api\\DataAccess\\WebUser\\CommentDataAccess.cs",
+              "ToolTip": "C:\\code\\c-sharp\\social_network_api\\social_network_api\\DataAccess\\WebUser\\CommentDataAccess.cs",
+              "RelativeToolTip": "social_network_api\\DataAccess\\WebUser\\CommentDataAccess.cs",
+              "ViewState": "AQIAAKsAAAAAAAAAAADwv84AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-15T15:58:42.827Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "TestResult.cs",
+              "DocumentMoniker": "C:\\code\\c-sharp\\social_network_api\\social_network_api\\Controllers\\TestResult.cs",
+              "RelativeDocumentMoniker": "social_network_api\\Controllers\\TestResult.cs",
+              "ToolTip": "C:\\code\\c-sharp\\social_network_api\\social_network_api\\Controllers\\TestResult.cs",
+              "RelativeToolTip": "social_network_api\\Controllers\\TestResult.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-17T01:47:56.521Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "UploadMediaController.cs",
+              "DocumentMoniker": "C:\\code\\c-sharp\\social_network_api\\social_network_api\\Controllers\\Common\\UploadMediaController.cs",
+              "RelativeDocumentMoniker": "social_network_api\\Controllers\\Common\\UploadMediaController.cs",
+              "ToolTip": "C:\\code\\c-sharp\\social_network_api\\social_network_api\\Controllers\\Common\\UploadMediaController.cs",
+              "RelativeToolTip": "social_network_api\\Controllers\\Common\\UploadMediaController.cs",
+              "ViewState": "AQIAACEAAAAAAAAAAAAowDwAAAA5AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-15T15:14:14.939Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\code\\c-sharp\\social_network_api\\social_network_api\\appsettings.json",
+              "RelativeDocumentMoniker": "social_network_api\\appsettings.json",
+              "ToolTip": "C:\\code\\c-sharp\\social_network_api\\social_network_api\\appsettings.json",
+              "RelativeToolTip": "social_network_api\\appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-12-15T15:25:00.203Z"
             }
           ]
         }

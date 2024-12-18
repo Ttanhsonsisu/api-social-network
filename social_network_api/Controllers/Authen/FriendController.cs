@@ -34,7 +34,7 @@ namespace social_network_api.Controllers.Authen
 
         [Route("create")]
         [HttpPost]
-        public async Task<JsonResult> Create(FriendRequest friendRequest)
+        public  JsonResult Create(FriendRequest friendRequest)
         {
             var username = User.Claims.Where(p => p.Type.Equals(ClaimTypes.Name)).FirstOrDefault();
             var user = _context.Users.Where(u => u.Username == username.Value).FirstOrDefault();
@@ -43,7 +43,7 @@ namespace social_network_api.Controllers.Authen
 
             var remoteIP = Request.HttpContext.Connection.RemoteIpAddress;
 
-            await _logging.InsertLogging(new LoggingRequest
+            _logging.InsertLogging(new LoggingRequest
             {
                 User_type = Consts.USER_TYPE_MEMBER,
                 Is_Call_Api = true,
@@ -90,7 +90,7 @@ namespace social_network_api.Controllers.Authen
 
         [Route("list")]
         [HttpPost]
-        public async Task<JsonResult> List(FriendRequest friendRequest)
+        public JsonResult List(FriendRequest friendRequest)
         {
             var username = User.Claims.Where(p => p.Type.Equals(ClaimTypes.Name)).FirstOrDefault();
             var user = _context.Users.Where(u => u.Username == username.Value).FirstOrDefault();
@@ -99,7 +99,7 @@ namespace social_network_api.Controllers.Authen
 
             var remoteIP = Request.HttpContext.Connection.RemoteIpAddress;
 
-            await _logging.InsertLogging(new LoggingRequest
+             _logging.InsertLogging(new LoggingRequest
             {
                 User_type = Consts.USER_TYPE_MEMBER,
                 Is_Call_Api = true,
